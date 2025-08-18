@@ -12,6 +12,22 @@ def lengthOfLongestSubstring(s):
         max_len = max(max_len, right - left + 1)  # Update result
     return max_len
 
+# class Solution:
+#     def lengthOfLongestSubstring(self, s: str) -> int:
+#         window = set()
+#         max_len = 0
+#         l = 0
+
+#         for r in range(len(s)):
+#             char = s[r]
+#             while char in window:
+#                 window.remove(s[l])
+#                 l += 1
+#             window.add(char)
+#             max_len = max(max_len, (r - l + 1))
+
+#         return max_len
+
 # def lengthOfLongestSubstring(s):
 #     # A hash set (or 'char_set') is a perfect data structure for this problem.
 #     # It provides O(1) average time complexity for adding, removing, and checking for an element's existence.
