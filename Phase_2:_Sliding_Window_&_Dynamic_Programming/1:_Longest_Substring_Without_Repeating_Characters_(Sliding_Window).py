@@ -103,5 +103,20 @@ def lengthOfLongestSubstring(s):
 #     return max_length
 
 
+# fastest
+# class Solution:
+#     def lengthOfLongestSubstring(self, s: str) -> int:
+#         n = len(s)
+#         if n <= 1:
+#             return n
+#         l = 0
+#         h = {s[0]: 0}
+#         ans = 1
+#         for r in range(1, n):
+#             if s[r] in h and h[s[r]] >= l:
+#                 l = h[s[r]] + 1
+#             h[s[r]] = r
+#             ans = max(ans, r - l + 1)
+#         return ans
 
 
