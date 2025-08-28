@@ -22,3 +22,26 @@ def climbStairs(n):
         
     # After the loop finishes, 'b' holds the total number of ways to reach step 'n'.
     return b
+
+
+
+# class Solution:
+#     def climbStairs(self, n: int) -> int:
+#     # Handle base cases
+#         if n <= 1:
+#             return 1
+    
+#         # Create a DP table to store the number of ways for each step
+#         dp = [0] * (n + 1)
+        
+#         # Base cases for the DP table
+#         dp[0] = 1
+#         dp[1] = 1
+    
+#         # Build the solution from the bottom up
+#         for i in range(2, n + 1):
+#             # The number of ways to reach step i is the sum of ways to reach
+#             # step i-1 and step i-2
+#             dp[i] = dp[i - 1] + dp[i - 2]
+            
+#         return dp[n]
